@@ -40,7 +40,7 @@ export default function Hero() {
                   scale: 0.9,
                   transition: { duration: 0.15 },
                 }}
-                className="font-bold text-black text-sm"
+                className="rounded-full bg-yellow-800 text-yellow-300 font-bold h-fit py-2 px-5 shadow-md shadow-yellow-800 scale-75"
               >
                 ORDER NOW
               </motion.button>
