@@ -67,25 +67,25 @@ export default function Hero() {
               >
                 <Accoutrement
                   img={Lettuce1}
-                  className="-top-16 sm:-top-20 -left-16 sm:-left-20"
+                  className="-top-8 sm:-top-12 -left-16 sm:-left-16"
                   speed={2}
                 />
 
                 <Accoutrement
                   img={Lettuce1}
-                  className="-bottom-16 sm:-bottom-20 -right-16 sm:-right-20 rotate-45"
+                  className="-bottom-10 sm:-bottom-10 right-0 rotate-45"
                   speed={2.7}
                 />
 
                 <Accoutrement
                   img={Tomatoes1}
-                  className="top-0 -right-7 sm:-right-10"
+                  className="top-0 -right-0 sm:-right-5"
                   speed={4}
                 />
 
                 <Accoutrement
                   img={Onion2}
-                  className="-top-16 sm:-top-20 right-16 sm:right-20"
+                  className="-top-10 sm:-top-16 right-16 sm:right-20"
                   speed={3}
                 />
                 <Accoutrement
@@ -96,7 +96,7 @@ export default function Hero() {
                 <Accoutrement
                   img={Onion2}
                   speed={3.2}
-                  className="top-7 sm:top-10 -left-20 sm:-left-32 rotate-45"
+                  className="top-20 sm:top-32 -left-16 sm:-left-24 rotate-45"
                 />
               </motion.div>
             </div>
