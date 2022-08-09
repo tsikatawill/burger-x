@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Rubik:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Insanity';
+  src: url(./fonts/Insanibc.ttf);
+}
+
+/* @font-face {
+  font-family: 'Caveat';
+  src: url(./fonts/Always\ Lovely.ttf);
+} */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  @apply max-w-screen-xl mx-auto px-2 sm:px-5;
+}
