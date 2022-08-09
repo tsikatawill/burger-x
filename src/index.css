@@ -22,3 +22,7 @@ body {
 .container {
   @apply max-w-screen-xl mx-auto px-2 sm:px-5;
 }
+
+section.menu {
+  background: url(./images/menu-bg.jpg) center center/cover no-repeat;
+}
