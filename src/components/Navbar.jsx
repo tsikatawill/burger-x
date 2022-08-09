@@ -23,7 +23,7 @@ export default function Navbar() {
           <li>Location</li>
           <li>Contact</li>
         </ul>
-        <button className="rounded-full bg-yellow-900 text-yellow-300 font-bold h-fit py-2 px-5 shadow-md shadow-yellow-800">
+        <button className="rounded-full bg-yellow-800 text-yellow-300 font-bold h-fit py-2 px-5 shadow-md shadow-yellow-800 scale-75">
           ORDER NOW
         </button>
       </div>
