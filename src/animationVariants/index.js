@@ -36,7 +36,7 @@ export const shake = {
   }),
 }
 
-export const dropSpring = {
+export const dropSpring = (custom = 0.2) => ({
   initial: {
     y: -100,
     opacity: 0,
@@ -44,9 +44,9 @@ export const dropSpring = {
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.2, type: 'spring' },
+    transition: { duration: custom, type: 'spring' },
   },
-}
+})
 
 export const verticalOccilation = {
   initial: {},
