@@ -1,4 +1,4 @@
-export const fadeIn = (direction = 'up', duration = 0.4) => {
+export const fadeIn = (direction = 'up', duration = 1) => {
   return {
     initial: {
       y: direction === 'up' ? 40 : -40,
@@ -44,7 +44,7 @@ export const dropSpring = {
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: 2, type: 'spring' },
+    transition: { duration: 0.2, type: 'spring' },
   },
 }
 
