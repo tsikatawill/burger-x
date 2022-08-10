@@ -36,11 +36,14 @@ export default function Hero() {
               </motion.p>
 
               <motion.button
+                initial={{
+                  scale: 1,
+                }}
                 whileTap={{
-                  scale: 0.9,
+                  scale: 0.8,
                   transition: { duration: 0.15 },
                 }}
-                className="rounded-full bg-yellow-800 text-yellow-300 font-bold h-fit py-2 px-5 shadow-md shadow-yellow-800 scale-75"
+                className="rounded-full bg-yellow-800 text-yellow-300 font-bold h-fit py-2 px-5 shadow-md shadow-yellow-800"
               >
                 ORDER NOW
               </motion.button>
@@ -62,8 +65,8 @@ export default function Hero() {
               <motion.div
                 className="accouts"
                 variants={staggerContainer}
-                initial="initial"
-                animate="animate"
+                // initial="initial"
+                // animate="animate"
               >
                 <Accoutrement
                   img={Lettuce1}
