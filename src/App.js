@@ -1,5 +1,6 @@
 import { AnimatePresence } from 'framer-motion'
 import Header from './components/Header'
+import Locations from './components/Locations'
 import Menu from './components/Menu'
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
     <AnimatePresence>
       <Header />
       <Menu />
+      <Locations />
     </AnimatePresence>
   )
 }
