@@ -53,6 +53,10 @@ export default function Navbar() {
           animate={showMenu ? 'animate' : 'initial'}
           exit="initial"
           className="nav-menu fixed flex flex-col items-center h-screen justify-evenly z-40 md:hidden bg-white top-0 w-full left-0"
+          onClick={() => {
+            setShowMenu(false)
+            console.log('sup')
+          }}
         >
           <a href="/">Home</a>
           <a href="/#menu">Menu</a>
