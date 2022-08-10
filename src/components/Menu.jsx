@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Burgers, Sandwiches } from '../lib/MenuItems'
-import { dropSpring, staggerContainer } from '../animationVariants'
+import { Burgers, Drinks, Sandwiches } from '../lib/MenuItems'
+import { fadeIn, staggerContainer } from '../animationVariants'
 
 function NavigationButton({ text, selected, onClick }) {
   return (
@@ -27,12 +27,12 @@ function MenuItems({ items }) {
       className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 mt-5"
     >
       {items.map((item, indx) => (
-        <motion.div variants={dropSpring(0.03)} key={indx}>
+        <motion.div variants={fadeIn()} key={indx}>
           <motion.img
             whileHover={{
               rotateZ: [0, 10, 0, -10, 0],
               translateY: [0, -10, 0],
-              transition: { duration: '2', repeat: Infinity, ease: 'linear' },
+              transition: { duration: '0.5', ease: 'linear' },
             }}
             src={item.image}
             alt="some.jpg"
@@ -43,7 +43,10 @@ function MenuItems({ items }) {
             <h3 className="font-bold text-yellow-900 uppercase text-lg">
               {item.name}
             </h3>
-            <p className="text-sm"> {item.description}</p>
+            <p className="text-sm max-w-md mx-auto sm:max-w-full">
+              {' '}
+              {item.description}
+            </p>
             <p className="font-semibold text-yellow-900 uppercase text-lg">
               ${item.price}
             </p>
@@ -82,8 +85,13 @@ export default function Menu() {
   }
 
   return (
-    <section className="menu">
-      <div className="container py-10 md:py-16">
+    <section className="menu" id="menu">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="container py-10 md:py-16"
+      >
         <div className="section-header text-center">
           <h2 className="text-xl text-yellow-900 font-bold mb-2">Our Menu</h2>
 
@@ -105,13 +113,13 @@ export default function Menu() {
             <NavigationButton
               text="Drinks"
               selected={selectedMenuItem}
-              onClick={() => setMenuItems(Burgers)}
+              onClick={() => setMenuItems(Drinks)}
             />
           </div>
         </div>
 
         <MenuItems items={menuItems} />
-      </div>
+      </motion.div>
     </section>
   )
 }
