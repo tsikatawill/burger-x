@@ -23,6 +23,7 @@ body {
   @apply max-w-screen-xl mx-auto px-2 sm:px-5;
 }
 
-section.menu {
+section.menu,
+nav.nav-menu {
   background: url(./images/menu-bg.jpg) center center/cover no-repeat;
 }

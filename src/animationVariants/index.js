@@ -52,12 +52,21 @@ export const verticalOccilation = {
   initial: {},
   animate: {
     y: [-20, 0, -20],
-    // rotate: [2, 0, 2],
     transition: {
-      // delay: 0.8,
       duration: 1,
       type: 'spring',
       repeat: Infinity,
     },
+  },
+}
+
+export const navMenu = {
+  initial: { opacity: 0.5, scale: 0, y: -1000, x: 1000 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    x: 0,
+    transition: { ease: 'easeOut', duration: 0.25 },
   },
 }
