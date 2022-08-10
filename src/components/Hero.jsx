@@ -30,7 +30,6 @@ export default function Hero() {
                 initial="initial"
                 animate="animate"
                 className="my-5 text-4xl"
-                style={{ fontFamily: 'Caveat' }}
               >
                 Juicy and superbly tasty
               </motion.p>

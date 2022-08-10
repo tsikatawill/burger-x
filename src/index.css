@@ -2,21 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Rubik:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 @font-face {
   font-family: 'Insanity';
   src: url(./fonts/Insanibc.ttf);
 }
 
-/* @font-face {
-  font-family: 'Caveat';
-  src: url(./fonts/Always\ Lovely.ttf);
-} */
-
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Indie Flower', sans-serif;
 }
 
 .container {
@@ -26,4 +21,8 @@ body {
 section.menu,
 nav.nav-menu {
   background: url(./images/menu-bg.jpg) center center/cover no-repeat;
+}
+
+.section-header h2 {
+  font-family: 'Insanity';
 }
