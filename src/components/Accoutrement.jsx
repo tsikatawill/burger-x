@@ -3,7 +3,7 @@ import { dropSpring, shake } from '../animationVariants'
 
 export default function Accoutrement({ img, className, speed }) {
   return (
-    <motion.div variants={dropSpring} className={`${className} absolute`}>
+    <motion.div variants={dropSpring()} className={`${className} absolute`}>
       <motion.img
         variants={shake}
         initial="initial"
