@@ -13,7 +13,7 @@ export default function Hero() {
       <section className="hero">
         <div className="container h-fit sm:h-96 grid sm:grid-cols-2 items-center">
           <div className="text-wrapper text-yellow-900 py-10">
-            <div className="text-inner max-w-md mx-auto text-center sm:text-left">
+            <div className="text-inner max-w-md mx-auto md:mx-0 text-center sm:text-left">
               <motion.h1
                 variants={fadeIn('down')}
                 initial="initial"
@@ -62,12 +62,7 @@ export default function Hero() {
                 alt="header-burger.jpg"
                 className="h-52 sm:w-72 sm:h-auto"
               />
-              <motion.div
-                className="accouts"
-                variants={staggerContainer}
-                // initial="initial"
-                // animate="animate"
-              >
+              <motion.div className="accouts" variants={staggerContainer}>
                 <Accoutrement
                   img={Lettuce1}
                   className="-top-8 sm:-top-12 -left-16 sm:-left-16"
