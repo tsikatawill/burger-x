@@ -1,11 +1,22 @@
 import Logo from '../images/burger-king-logo.png'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { fadeIn, navMenu } from '../animationVariants'
 import { FaHamburger, FaTimes } from 'react-icons/fa'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
+
+  useEffect(() => {
+    const body = document.querySelector('body')
+    if (showMenu) {
+      body.style.height = '100vh'
+      body.style.overflow = 'hidden'
+    } else {
+      body.style.height = 'auto'
+      body.style.overflow = 'auto'
+    }
+  }, [showMenu])
 
   return (
     <motion.nav
@@ -30,7 +41,7 @@ export default function Navbar() {
 
         <motion.div
           whileTap={{ scale: 0.9 }}
-          className="menu-toggle fixed right-5 z-50 md:hidden cursor-pointer text-yellow-800 border-yellow-800 p-1 border rounded-full"
+          className="menu-toggle absolute right-5 z-50 md:hidden cursor-pointer text-yellow-800 border-yellow-800 p-1 border rounded-full"
           onClick={() => setShowMenu(!showMenu)}
         >
           {showMenu ? <FaTimes /> : <FaHamburger />}
