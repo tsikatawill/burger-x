@@ -29,14 +29,19 @@ export default function Navbar() {
         <div className="Logo">
           <img src={Logo} alt="logo.jpg" className="w-16" />
         </div>
-        <ul
-          className="hidden md:flex items-center gap-10 text-yellow-900 font-bold text-2xl"
-          style={{ fontFamily: 'Caveat' }}
-        >
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Location</li>
-          <li>Contact</li>
+        <ul className="hidden md:flex items-center gap-10 text-yellow-900 font-bold text-2xl">
+          <li>
+            <a href="/#">Home</a>
+          </li>
+          <li>
+            <a href="/#menu">Menu</a>
+          </li>
+          <li>
+            <a href="/#locations">Locations</a>
+          </li>
+          <li>
+            <a href="/#contact">Contact</a>
+          </li>
         </ul>
 
         <motion.div
