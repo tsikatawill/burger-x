@@ -57,10 +57,20 @@ export default function Hero() {
             className="image-wrapper row-start-1 sm:col-start-2 h-full sm:h-fit py-10"
           >
             <div className="relative h-full w-fit mx-auto grid place-content-center">
-              <img
+              <motion.img
+                drag
+                dragConstraints={{
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                }}
                 src={HeaderBurger}
                 alt="header-burger.jpg"
                 className="h-52 sm:w-72 sm:h-auto"
+                style={{
+                  filter: 'drop-shadow(5px 5px 10px #df830abe)',
+                }}
               />
               <motion.div className="accouts" variants={staggerContainer}>
                 <Accoutrement
