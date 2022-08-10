@@ -43,8 +43,7 @@ function MenuItems({ items }) {
             <h3 className="font-bold text-yellow-900 uppercase text-lg">
               {item.name}
             </h3>
-            <p className="text-sm max-w-md mx-auto sm:max-w-full">
-              {' '}
+            <p className="text-sm max-w-xs mx-auto sm:max-w-full">
               {item.description}
             </p>
             <p className="font-semibold text-yellow-900 uppercase text-lg">
