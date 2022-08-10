@@ -37,6 +37,9 @@ function MenuItems({ items }) {
             src={item.image}
             alt="some.jpg"
             className="h-40 w-40 mb-2 mx-auto mt-4"
+            style={{
+              filter: 'drop-shadow(5px 5px 10px #2222227f)',
+            }}
           />
 
           <div className="text text-center">
