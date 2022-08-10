@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import NavigationButton from './NavigationButton'
+import {
+  FaCalendarAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaRegClock,
+} from 'react-icons/fa'
 
 export default function Locations() {
   const [selectedLocation, setSelectedLocation] = useState('Tema')
@@ -67,22 +73,42 @@ export default function Locations() {
           {maps.map((map, idx) => {
             return (
               map.location === selectedLocation && (
-                <motion.iframe
-                  initial={{ x: 100, opacity: 0, scale: 0.5 }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                    scale: 1,
-                    transition: { duration: 0.25, ease: 'easeOut' },
-                  }}
-                  viewport={{ once: true }}
-                  key={idx}
-                  src={map.src}
-                  title={map.location}
-                  loading="lazy"
-                  className="h-56 w-full rounded-md"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></motion.iframe>
+                <div className="grid sm:grid-cols-2 gap-10">
+                  <motion.iframe
+                    initial={{ x: 100, opacity: 0, scale: 0.5 }}
+                    whileInView={{
+                      x: 0,
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.25, ease: 'easeOut' },
+                    }}
+                    viewport={{ once: true }}
+                    key={idx}
+                    src={map.src}
+                    title={map.location}
+                    loading="lazy"
+                    className="h-56 sm:h-64 lg:h-72 w-full rounded-md"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></motion.iframe>
+                  <div className="location-details text-center sm:text-left">
+                    <h3 className="text-yellow-900 font-semibold">
+                      Join us at {selectedLocation} today, 123 Street, 45 Av
+                    </h3>
+                    <p>We serve the best lorem to our most loyal ipsums</p>
+                    <p className="flex mt-4 items-center gap-2 justify-center sm:justify-start">
+                      <FaCalendarAlt /> Monday - Saturday
+                    </p>
+                    <p className="flex items-center gap-2 justify-center sm:justify-start my-2">
+                      <FaRegClock /> 7am - 11pm
+                    </p>
+                    <p className="flex items-center gap-2 justify-center sm:justify-start my-2">
+                      <FaPhoneAlt /> +123456789
+                    </p>
+                    <p className="flex items-center gap-2 justify-center sm:justify-start">
+                      <FaEnvelope /> fake@email.com
+                    </p>
+                  </div>
+                </div>
               )
             )
           })}
