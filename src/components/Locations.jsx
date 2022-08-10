@@ -75,7 +75,7 @@ export default function Locations() {
               map.location === selectedLocation && (
                 <div className="grid sm:grid-cols-2 gap-10">
                   <motion.div
-                    className="map bg-slate-300"
+                    className="map bg-slate-300 h-56 sm:h-64 lg:h-72 w-full rounded-md overflow-hidden shadow-md shadow-slate-300"
                     initial={{ x: 100, opacity: 0, scale: 0.5 }}
                     whileInView={{
                       x: 0,
@@ -89,8 +89,8 @@ export default function Locations() {
                       key={idx}
                       src={map.src}
                       title={map.location}
+                      className="w-full h-full"
                       loading="lazy"
-                      className="h-56 sm:h-64 lg:h-72 w-full rounded-md"
                       referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </motion.div>
