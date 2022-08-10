@@ -69,7 +69,7 @@ export default function Hero() {
                 alt="header-burger.jpg"
                 className="h-52 sm:w-72 sm:h-auto"
                 style={{
-                  filter: 'drop-shadow(5px 5px 10px #df830abe)',
+                  filter: 'drop-shadow(5px 5px 10px #df830a8b)',
                 }}
               />
               <motion.div className="accouts" variants={staggerContainer}>
