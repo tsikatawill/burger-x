@@ -74,7 +74,8 @@ export default function Locations() {
             return (
               map.location === selectedLocation && (
                 <div className="grid sm:grid-cols-2 gap-10">
-                  <motion.iframe
+                  <motion.div
+                    className="map bg-slate-300"
                     initial={{ x: 100, opacity: 0, scale: 0.5 }}
                     whileInView={{
                       x: 0,
@@ -83,13 +84,16 @@ export default function Locations() {
                       transition: { duration: 0.25, ease: 'easeOut' },
                     }}
                     viewport={{ once: true }}
-                    key={idx}
-                    src={map.src}
-                    title={map.location}
-                    loading="lazy"
-                    className="h-56 sm:h-64 lg:h-72 w-full rounded-md"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></motion.iframe>
+                  >
+                    <iframe
+                      key={idx}
+                      src={map.src}
+                      title={map.location}
+                      loading="lazy"
+                      className="h-56 sm:h-64 lg:h-72 w-full rounded-md"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </motion.div>
                   <div className="location-details text-center sm:text-left">
                     <h3 className="text-yellow-900 font-semibold">
                       Join us at {selectedLocation} today, 123 Street, 45 Av
