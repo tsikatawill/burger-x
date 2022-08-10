@@ -1,8 +1,12 @@
 import Logo from '../images/burger-king-logo.png'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../animationVariants'
+import { AnimatePresence, motion } from 'framer-motion'
+import { fadeIn, navMenu } from '../animationVariants'
+import { FaHamburger, FaTimes } from 'react-icons/fa'
+import { useState } from 'react'
 
 export default function Navbar() {
+  const [showMenu, setShowMenu] = useState(false)
+
   return (
     <motion.nav
       variants={fadeIn('down', 0.25)}
@@ -15,7 +19,7 @@ export default function Navbar() {
           <img src={Logo} alt="logo.jpg" className="w-16" />
         </div>
         <ul
-          className="flex items-center gap-10 text-yellow-900 font-bold text-2xl"
+          className="hidden md:flex items-center gap-10 text-yellow-900 font-bold text-2xl"
           style={{ fontFamily: 'Caveat' }}
         >
           <li>Home</li>
@@ -23,9 +27,27 @@ export default function Navbar() {
           <li>Location</li>
           <li>Contact</li>
         </ul>
-        <button className="rounded-full bg-yellow-800 text-yellow-300 font-bold h-fit py-2 px-5 shadow-md shadow-yellow-800 scale-75">
-          ORDER NOW
-        </button>
+
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          className="menu-toggle fixed right-5 z-50 md:hidden cursor-pointer text-yellow-800 border-yellow-800 p-1 border rounded-full"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          {showMenu ? <FaTimes /> : <FaHamburger />}
+        </motion.div>
+
+        <motion.nav
+          variants={navMenu}
+          initial="initial"
+          animate={showMenu ? 'animate' : 'initial'}
+          exit="initial"
+          className="nav-menu fixed flex flex-col items-center h-screen justify-evenly z-40 md:hidden bg-white top-0 w-full left-0"
+        >
+          <a href="/">Home</a>
+          <a href="/#menu">Menu</a>
+          <a href="/#location">Location</a>
+          <a href="/#contact">Contact</a>
+        </motion.nav>
       </div>
     </motion.nav>
   )
