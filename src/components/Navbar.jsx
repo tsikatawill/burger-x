@@ -40,7 +40,7 @@ export default function Navbar() {
             <a href="/#locations">Locations</a>
           </li>
           <li>
-            <a href="/#contact">Contact</a>
+            <a href="/#locations">Contact</a>
           </li>
         </ul>
 
@@ -65,8 +65,8 @@ export default function Navbar() {
         >
           <a href="/">Home</a>
           <a href="/#menu">Menu</a>
-          <a href="/#location">Location</a>
-          <a href="/#contact">Contact</a>
+          <a href="/#locations">Location</a>
+          <a href="/#locations">Contact</a>
         </motion.nav>
       </div>
     </motion.nav>
