@@ -26,9 +26,9 @@ export default function Navbar() {
       className="navbar"
     >
       <div className="container py-2 flex justify-between items-center">
-        <div className="Logo">
+        <a href="/#" className="Logo">
           <img src={Logo} alt="logo.jpg" className="w-16" />
-        </div>
+        </a>
         <ul className="hidden md:flex items-center gap-10 text-yellow-900 font-bold text-2xl">
           <li>
             <a href="/#">Home</a>
